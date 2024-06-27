@@ -11,6 +11,8 @@ makedocs(;
     pages=[
         "Home" => "index.md",  #
         "API reference" => [
+            "interface.md",
+            "decision_focused.md",
             "warcraft.md",  #
         ],
     ],

@@ -1,10 +1,9 @@
 using Aqua: Aqua
 using Documenter: Documenter
+using InferOptBenchmarks
 using JET: JET
 using JuliaFormatter: JuliaFormatter
-using InferOptBenchmarks
 using Test
-using Zygote
 
 @testset verbose = true "InferOptBenchmarks" begin
     @testset verbose = true "Formalities" begin
@@ -26,5 +25,17 @@ using Zygote
 
     @testset "Warcraft" begin
         include("WarcraftTest/WarcraftTest.jl")
+    end
+
+    @testset "Shortest paths" begin
+        include("FixedSizeShortestPathTest/FixedSizeShortestPathTest.jl")
+    end
+
+    @testset "Portfolio Optimization" begin
+        include("PortfolioOptimizationTest/PortfolioOptimizationTest.jl")
+    end
+
+    @testset "Subset Selection" begin
+        include("SubsetSelectionTest/SubsetSelectionTest.jl")
     end
 end
